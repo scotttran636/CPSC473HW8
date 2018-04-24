@@ -1,0 +1,10 @@
+<h2>{{title}}</h2>
+
+<!-- Loop through array returned by scientists.js, format and print -->
+<!-- use the each helper to loop over each item in array returned from the model() and print inside <li> element -->
+<!-- use action keyword in <li> opening tag to add click event listener, running showPerson() from actions in people-list component on click -->
+<ul>
+  {{#each people as |person|}}
+    <li {{action "showPerson" person}}>{{person}}</li>
+  {{/each}}
+</ul>
